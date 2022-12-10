@@ -1,0 +1,6 @@
+---
+some_user: some_user
+hosts: group_hosts
+
+delivery_link: https://nexus.com/repository/repo/package-1.1.zip
+delivery_directory: /app/home/some_user/package
