@@ -2,7 +2,19 @@
 - hosts: group_hosts
   user: some_user
   become: true
+  vars_prompt:
+    - name: host aut
+      private: false
+      prompt: What is your username?
+
+    - name: password
+      prompt: What is your password?
+      
   tasks:
+  - name: Print a message
+      ansible.builtin.debug:
+        msg: 'connected as {{ host aut }}'
+        
    - name: Download delivery
      shell: wget --no-check-certificate -O - https://nexus.com/repository/repo/package-1.1.zip | zip -r /app/home/some _user/package
    
