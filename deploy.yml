@@ -1,0 +1,19 @@
+---
+- hosts: group_hosts
+  become: true
+  tasks:
+   - name: Download delivery
+     shell: wget --no-check-certificate -O - https://nexus.com/repository/repo/package-1.1.zip | zip -r /app/home/some _user/package
+   
+   - name: Start app
+     server: 
+       state: started 
+       wasdir: /app/home/some _user/package 
+       name: delivery-process
+
+   - name: Stop
+     server: 
+       state: stopped 
+       wasdir: /usr/local/WebSphere/AppServer/ 
+       name: delivery-stop
+ 
