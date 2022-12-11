@@ -1,5 +1,6 @@
 ---
 - hosts: group_hosts
+  user: some_user
   become: true
   tasks:
    - name: Download delivery
