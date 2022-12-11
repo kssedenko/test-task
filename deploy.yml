@@ -18,7 +18,7 @@
    - name: Start app
      server:
        state: started
-       wasdir: /app/home/some _user/package
+       wasdir: /app/home/some_user/package
        name: delivery-process
 
    - name: Stop
