@@ -1,5 +1,5 @@
 ---
 some_user: some_user
 hosts: group_hosts
-host_user: root
-host_password: 1234
+ansible_user: root
+ansible_password: 1234
